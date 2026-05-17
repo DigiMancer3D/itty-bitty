@@ -1,25 +1,25 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "docs",
     "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "samples/**",
-      "src/**",
-      "LICENSE",
       "**.md",
-      "**/.git/**",
       "**.sh",
-      "index.src/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      "**/.*",
+      "**/.git/**",
+      "**/node_modules/**",
+      "firebase.json",
+      "LICENSE",
+      "samples/**",
+      "src/**"
     ],
     "cleanUrls": true,
-    "trailingSlash": false
+    "trailingSlash": false,
+    "rewrites": [
+      {
+        "source": "/**/",
+        "function": "index"
+      }
+    ]
   }
 }
+
